@@ -1,124 +1,283 @@
+
 <!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio</title>
+
+    <title>Portofolio Hadiid Fadli Marbun</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="sesi-3/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+
+    <!-- ================= NAVBAR ================= -->
     <section id="menu">
-      <fieldset>
-        <table width="100%" border="0" cellpadding="15">
-          <tr>
-            <td width="50%">
-              <h2>HADIID FADLI MARBUN</h2>
-            </td>
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
 
-            <td width="50%" align="right">
-              <a href="#menu">Home</a>
+          <a class="navbar-brand fw-bold" href="#menu">
+            HADIID FADLI MARBUN
+          </a>
 
-              <a href="#about">About</a>
+          <!-- Tombol ketika layar HP -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-              <a href="#portfolio">Portfolio</a>
-            </td>
-          </tr>
-        </table>
-      </fieldset>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </nav>
     </section>
 
-    <section>
-        <fieldset>
-    <table width="100%">
-      <tr>
-        <td>
-            <p>ini adalah foto saya saat berada di gunung cermai pada tanggal 28 agustus 2026</p>
-          
-        </td>
 
-        <td width="50%" align="right">
-            <img src="gambar\hadiid.jpeg" alt="Foto Profile" width="600" height="400" />
-        </td>
-      </tr>
-    </table>
-    </fieldset>
-    </section>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
 
-    <section id="about">
-      <fieldset>
-        <table
-          border="0"
-          cellpeding="100"
-          cellspacing="80"
-          align="center"
-          width="100%"
-          
-        >
-          <h2 align="center">ABOUT ME</h2>
+          <!-- Teks -->
+          <div class="col-md-6">
+            <p class="text-secondary">
+              28 Agustus 2026
+            </p>
 
-          <tr>
-            <td width="35%" bgcolor="#eeeeee" align="center">Full Name</td>
-            <td width="35%" bgcolor="#eeeeee" align="center">Education</td>
-            <td width="35%" bgcolor="#eeeeee" align="center">Pekerjaan</td>
-          </tr>
+            <h1 class="fw-bold">
+              Halo, Saya Hadiid
+            </h1>
 
-          <tr>
-            <td bgcolor="#eeeeee" align="center">Contact</td>
-            <td bgcolor="#eeeeee" align="center">Hobi</td>
-            <td bgcolor="#eeeeee" align="center">Alamat</td>
-          </tr>
-        </table>
-      </fieldset>
-    </section>
+            <p class="lead">
+              Ini adalah foto saya saat berada di Gunung Cermai
+              pada tanggal 28 Agustus 2026.
+            </p>
 
-    <section id="portfolio">
-        <fieldset>
-      <table 
-        cellpeding="50"
-        cellspacing="80"
-        align="center"
-        width="1500"
-      >
-      <h2 align="center">portfolio</h2>
-        <tr>
+            <a href="#about" class="btn btn-dark">
+              Tentang Saya
+            </a>
+          </div>
 
-          <td width="33%" align="center">
+          <!-- Foto -->
+          <div class="col-md-6 text-center">
             <img
-              src="gambar\hadiid.jpeg"
-              alt="Foto Profile"
-              width="350"
-              height="200"
+              src="gambar/hadiid.jpeg"
+              alt="Foto Profile Hadiid"
+              class="img-fluid rounded shadow profile-image"
             />
-            <h3 align="center">Project 1</h3>
-            <p>ini foto saya</p>
-          </td>
+          </div>
 
-          <td width="33%" align="center">
-            <img
-              src="gambar\kucing.webp"
-              alt="Foto kucing"
-              width="350"
-              height="200"
-            />
-            <h3 align="center" >Project 2</h3>
-            <p>kcing hitam dan manis</p>
-          </td>
-
-          <td width="33%" align="center">
-            <img
-              src="gambar\kota.webp"
-              alt="Foto Kota"
-              width="350"
-              height="200"
-            />
-            <h3 align="center">Project 3</h3>
-            <p>kota di malam hari</p>
-          </td>
-
-          
-        </tr>
-      </table>
-      </fieldset>
+        </div>
+      </div>
     </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="about-section">
+      <div class="container">
+
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">ABOUT ME</h2>
+          <p class="text-secondary">
+            Informasi singkat tentang saya
+          </p>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Full Name -->
+          <div class="col-md-4">
+            <div class="about-card">
+              <h5>Full Name</h5>
+              <p>Hadiid Fadli Marbun</p>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="col-md-4">
+            <div class="about-card">
+              <h5>Education</h5>
+              <p>Teknologi Informasi</p>
+            </div>
+          </div>
+
+          <!-- Pekerjaan -->
+          <div class="col-md-4">
+            <div class="about-card">
+              <h5>Pekerjaan</h5>
+              <p>Programmer</p>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-md-4">
+            <div class="about-card">
+              <h5>Contact</h5>
+              <p>Email / WhatsApp</p>
+            </div>
+          </div>
+
+          <!-- Hobi -->
+          <div class="col-md-4">
+            <div class="about-card">
+              <h5>Hobi</h5>
+              <p>Photography & Traveling</p>
+            </div>
+          </div>
+
+          <!-- Alamat -->
+          <div class="col-md-4">
+            <div class="about-card">
+              <h5>Alamat</h5>
+              <p>Jakarta</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= PORTFOLIO ================= -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">PORTFOLIO</h2>
+          <p class="text-secondary">
+            Beberapa project dan foto saya
+          </p>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Project 1 -->
+          <div class="col-md-4">
+            <div class="card portfolio-card shadow-sm">
+
+              <img
+                src="gambar/hadiid.jpeg"
+                class="card-img-top"
+                alt="Foto Profile"
+              />
+
+              <div class="card-body">
+                <h3 class="card-title fs-5">
+                  Project 1
+                </h3>
+
+                <p class="card-text">
+                  Ini adalah foto saya.
+                </p>
+
+                <a href="#" class="btn btn-dark">
+                  Lihat Project
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Project 2 -->
+          <div class="col-md-4">
+            <div class="card portfolio-card shadow-sm">
+
+              <img
+                src="gambar/kucing.webp"
+                class="card-img-top"
+                alt="Foto Kucing"
+              />
+
+              <div class="card-body">
+                <h3 class="card-title fs-5">
+                  Project 2
+                </h3>
+
+                <p class="card-text">
+                  Kucing hitam dan manis.
+                </p>
+
+                <a href="#" class="btn btn-dark">
+                  Lihat Project
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Project 3 -->
+          <div class="col-md-4">
+            <div class="card portfolio-card shadow-sm">
+
+              <img
+                src="gambar/kota.webp"
+                class="card-img-top"
+                alt="Foto Kota"
+              />
+
+              <div class="card-body">
+                <h3 class="card-title fs-5">
+                  Project 3
+                </h3>
+
+                <p class="card-text">
+                  Kota di malam hari.
+                </p>
+
+                <a href="#" class="btn btn-dark">
+                  Lihat Project
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-white text-center py-4">
+      <p class="mb-0">
+        © 2026 Hadiid Fadli Marbun
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="/sesi-3/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>
+```
