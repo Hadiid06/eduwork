@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../sesi-3/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bols logo-toko" href="#">Toko Kita</a>
+        </div>
+    </nav>
+    <!-- konten utama -->
+     <main class= "conteiner py-5">
+        <h1 class="text-center mb-2">DAFTAR PRODUK</h1>
+        <p class="text-center text-secondry mb-4">temukan produk</p>
+     </main>
+
+
+     <!--Filter katagori  -->
+     <div class="mb-4 filter-katagori">
+         <label for="filterKategori" class="form-label"> Pilih Katagori</label>
+         
+        <select id="filterKategori" class="form-select ">
+            <option value="Semua"> Semua Produk</option>
+            <option value="Elektronik"> Elektronik</option>
+            <option value="Pakaian"> Pakaian</option>
+        </select>
+     </div> 
+   
+     <!-- Tempat produk ditampilkan -->
+        <div id="daftarProduk" class="row g-4">
+
+        </div>
+
+
+
+     <script src="../sesi-3/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+       <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+body {
+    background-color: #f5f7fb;
+}
+
+h1 {
+    color: #1e293b;
+}
+
+#daftarProduk {
+    min-height: 200px;
+}
+
+.kartu-produk {
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.kartu-produk:hover {
+    transform: translateY(-5px);
+}
+
+.gambar-produk {
+    height: 180px;
+    object-fit: cover;
+}
+.logo-toko{
+    margin-left: -25px;
+}
+.filter-katagori{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.gambar-produk {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
