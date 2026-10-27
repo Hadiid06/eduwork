@@ -67,6 +67,7 @@ function e($value)
             <nav class="navlinks">
                 <a href="index.php">Kelola Produk</a>
                 <a href="catalog.php">Etalase</a>
+                <a href="checkout.php">Checkout</a>
             </nav>
 
         </div>
