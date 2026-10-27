@@ -1,10 +1,16 @@
 
 <?php
 
+session_start();
 require 'koneksi_db.php';
+
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 
 // Ambil kata kunci pencarian
 $search = trim($_GET['search'] ?? '');
+$cartCount = array_sum($_SESSION['cart'] ?? []);
 
 // Ambil data produk
 if ($search !== '') {
@@ -81,6 +87,7 @@ function e($v)
             <nav class="navlinks">
                 <a href="index.php">Kelola Produk</a>
                 <a href="catalog.php">Etalase</a>
+                <a href="checkout.php">Checkout (<?= (int) $cartCount ?>)</a>
             </nav>
         </div>
     </header>
@@ -140,6 +147,26 @@ function e($v)
                         <span class="stock">
                             Stok <?= (int) $p['stock'] ?> unit
                         </span>
+
+                        <form class="add-to-cart" action="checkout.php" method="post">
+                            <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
+                            <input type="hidden" name="action" value="add">
+                            <input type="hidden" name="product_id" value="<?= (int) $p['id'] ?>">
+                            <label class="sr-only" for="quantity-<?= (int) $p['id'] ?>">Jumlah <?= e($p['name']) ?></label>
+                            <input
+                                id="quantity-<?= (int) $p['id'] ?>"
+                                name="quantity"
+                                type="number"
+                                min="1"
+                                max="<?= (int) $p['stock'] ?>"
+                                value="1"
+                                required
+                                <?= (int) $p['stock'] < 1 ? 'disabled' : '' ?>
+                            >
+                            <button class="btn" type="submit" <?= (int) $p['stock'] < 1 ? 'disabled' : '' ?>>
+                                Tambah ke keranjang
+                            </button>
+                        </form>
 
                     </article>
 

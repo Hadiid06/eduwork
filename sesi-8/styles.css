@@ -239,6 +239,90 @@ tbody tr:last-child td {
     font: inherit
 }
 
+.add-to-cart {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px
+}
+
+.add-to-cart input {
+    width: 76px;
+    padding: 9px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font: inherit
+}
+
+.add-to-cart button:disabled,
+.add-to-cart input:disabled {
+    cursor: not-allowed;
+    opacity: .55
+}
+
+.quantity-input {
+    width: 78px;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font: inherit
+}
+
+.alert {
+    border: 1px solid #f2c7c5;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 16px 0;
+    color: #8f1d18;
+    background: #fff5f4
+}
+
+.alert-success {
+    border-color: #b8e3cf;
+    color: #126548;
+    background: #effaf5
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, .8fr);
+    gap: 18px;
+    align-items: start
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 18px;
+    font-weight: 700
+}
+
+.invoice-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 18px
+}
+
+.invoice-meta p {
+    margin: 6px 0;
+    line-height: 1.5
+}
+
 @media(max-width:650px) {
     .navlinks {
         float: none;
@@ -257,5 +341,9 @@ tbody tr:last-child td {
     th,
     td {
         padding: 11px 9px
+    }
+
+    .checkout-layout {
+        grid-template-columns: 1fr
     }
 }
